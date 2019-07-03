@@ -12,9 +12,9 @@ public class PrintTree {
 
     }
 
-    public ArrayList<Integer> PrintFromTopToBottom(zhen.swordoffer.TreeNode root) {
+    public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
         ArrayList<Integer> arrayList = new ArrayList<>();
-        Queue<zhen.swordoffer.TreeNode> quene = new LinkedList<>();
+        Queue<TreeNode> quene = new LinkedList<>();
         if (root == null) return arrayList;
         quene.add(root);
         while (quene.size() != 0) {

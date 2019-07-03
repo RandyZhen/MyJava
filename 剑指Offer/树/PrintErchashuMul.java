@@ -9,10 +9,10 @@ import java.util.Queue;
 public class PrintErchashuMul {
 
     /**规律：先把头结点放入队列，每次从队列头部取出打印节点时，把此节点的左右节点（如果有）放入队列尾部，接着从队列头部取出最早进入队列的节点*/
-    ArrayList<ArrayList<Integer>> Print(zhen.swordoffer.TreeNode pRoot) {
+    ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();/*队列LinkedList完成层序遍历，用end记录每层结点数目*/
         if (pRoot == null) return result;
-        Queue<zhen.swordoffer.TreeNode> layer = new LinkedList<>();
+        Queue<TreeNode> layer = new LinkedList<>();
         ArrayList<Integer> layerList = new ArrayList<>();
         layer.add(pRoot);
         int start = 0, end = 1;

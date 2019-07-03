@@ -11,18 +11,18 @@ public class PrintErchashu {
 
     }
 
-    public ArrayList<ArrayList<Integer>> Print(zhen.swordoffer.TreeNode pRoot) {
+    public ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
         if (pRoot == null) return null;
         int layer = 1;
-        Stack<zhen.swordoffer.TreeNode> s1 = new Stack<zhen.swordoffer.TreeNode>();
-        Stack<zhen.swordoffer.TreeNode> s2 = new Stack<zhen.swordoffer.TreeNode>();
+        Stack<TreeNode> s1 = new Stack<TreeNode>();
+        Stack<TreeNode> s2 = new Stack<TreeNode>();
         ArrayList<ArrayList<Integer>> Arraylist = new ArrayList<>();
         s1.push(pRoot);
         while (!s1.empty() || !s2.empty()) {
             if (layer % 2 != 0) {//奇数层，从左都右
                 ArrayList<Integer> arrayList = new ArrayList<>();
                 while (!s1.empty()) {
-                    zhen.swordoffer.TreeNode node = s1.pop();
+                    TreeNode node = s1.pop();
                     if (node != null) {
                         arrayList.add(node.val);
                         s2.push(node.left);
